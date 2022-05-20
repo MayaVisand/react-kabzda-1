@@ -1,9 +1,23 @@
-.item {
+.card {
     color: dimgray;
+    border: 1px solid #7a7a7a;
+   padding: 10px;
 }
 
-.item img {
+.message {
+padding-left: 20px;
+}
+
+.avatar {
     width: 50px;
     border-radius: 30px;
     background-color: white;
+}
+
+.likeBlock {
+    padding-left: 20px;
+}
+
+.like {
+    width: 20px;
 }

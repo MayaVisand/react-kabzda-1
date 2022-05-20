@@ -1,3 +1,10 @@
-.MyPosts {
+.postsBlock {
+    padding: 10px;
+}
 
+.posts {
+    margin: 10px 0px;
+padding: 10px;
+    border: 1px solid #a8a7a7;
+    border-radius: 5px;
 }

@@ -1,0 +1,40 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+
+}
+.dialogItems {
+padding: 10px;
+}
+
+
+.avatar {
+    width: 50px;
+    border-radius: 30px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.dialog {
+    padding: 10px;
+}
+.dialogItems .active {
+    color: cornflowerblue;
+}
+.messages {
+    padding: 10px;
+}
+
+.userName
+{
+    padding: 5px;
+    border: #919191 1px solid;
+    border-radius: 3px;
+    text-decoration: none;
+    background-color: #d6dde1;
+    color: #656262;
+}
+
+.message {
+    padding: 10px;
+}

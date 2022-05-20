@@ -1,8 +1,10 @@
 import React from "react";
 import style from "./Header.module.css";
 const Header = () => {
-    return <header className={style.header}>
+    return (
+        <header className={style.header}>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAMAAACY0sbcAAAATlBMVEX///8mJCTJyMign5+SkZFcW1vx8fHk4+PW1tY6OTm7urouLCyLiopSUVFPTU1WVFR/fn6tra1mZGRzcXFHRUVtbGw0MjJKSEh+fHyFhISSHawlAAACyUlEQVR4nO3d63KCMBAFYBYpaNKLt9r6/i9aLUVNyEJoXLO05/w0mnyj2brOEFoUCII8KrVZqE955ZY0g4ArGXAlA65kwJUMuJJhuOMtxsPCuMC9S8CVDLiSAVcy4EoGXMn8H27d1ImLNw0z827HvCKBW1q7ScEWlT0EH99Yfs0E7mnojXl/IlLuw1M3byNrJnCJqt9h63V46vo5Ys0ELq1KZnwoxoanLldRayZwibZTS679vPtT19voNRO4ZBeTtJUNT72wE9ZM4BK9LKOxl8/bm3q5n7hmApfoOW5H1DsKTv1Teg/jxpXcxrov6h43KwoPiHEjSu5aYv7UT9yAIHes5KreC/JyB0uu9D9vBVyidXhHeCWmhksrE3iuX2J6uKeS8/ue5Qv3VA1cr+S6rkUtl2h/LblgiSnjXkrupmtRzW1LbsGUmD7uqeQMW2IauREBF1wV3GOvP/SyPWriVsNfCae/bL0WMi/X+dno5fzrSB23aMJfY20jrI8bbBK6nkcjtyjevYGnrmXXyfVV7AC44IILLrjgggsuuOCCCy644IILLrjgggsuuOCCCy644IILLrjgggsuuOCC+z+53TXfM+F2Q3Ph0kczK257Bd98uN8X8enkluHrT63RyeVOKtFBJ7cYviJZH3fwCJAKrn/mjj9gpYD7GjgyOna2Jhs3hC1GTy5l4jLYc3pHbbNzB7BF/yBzZu4w9hz3mHhW7jj2+4lsyT2Sa6rYezb0z2Vn4E6JCb/BWrlMG6GWG24jFHNDfbBqbr+NEOfayPtfMPHaCGnu++9v6NPGbSNkuXHfCiO5LTlJ7iHt3k6X3LQRctzETevk0kaIcZM3rZufkhPi3mXTOhG8Y9a9Nq0bI3I/suXnHTetk3p9ZEYSuDkCrmTAlQy4kgFXMuBKBlzJ/EGu1oArGXAlA65kwJUMuJK5cmf2nxcRoXwBcVpKaHdOqGEAAAAASUVORK5CYII="/>
-    </header>;
+    </header>
+)
 }
  export default Header;
