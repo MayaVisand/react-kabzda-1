@@ -7,6 +7,7 @@ import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 
 import {Routes, Route, BrowserRouter} from "react-router-dom";
+import state from "./redux/state";
 
 
 const App = (props) => {
@@ -18,8 +19,8 @@ const App = (props) => {
                 <div className="app-wrapper-content">
                     <BrowserRouter>
                         <Routes>
-                            <Route path='/dialogs' element={<Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
-                            <Route path='/profile' element={<Profile posts={props.posts}/>}/>
+                            <Route path='/dialogs' element={<Dialogs state={state.messagesPage}/>}/>
+                            <Route path='/profile' element={<Profile state={state.profilePage}/>}/>
                         </Routes>
                     </BrowserRouter>
 

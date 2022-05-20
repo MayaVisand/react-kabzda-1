@@ -1,17 +1,11 @@
 import React from "react";
 import style from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import state from "../../../redux/state";
 
 const MyPosts = (props) => {
-    //
-    // let postsData = [
-    //     {id: 1, message: 'hi, its my first post', likesCount: 11},
-    //     {id: 2, message: 'hi, where lorem ipsum gjhgfkj djf jhd jfhkjdsh ', likesCount: 66},
-    //     {id: 3, message: 'Ikj djfhfsk sdk skdjkdfj sdwoels woewiqow odkk', likesCount: 131},
-    //
-    // ]
 
-     let postsElements = props.posts.map(element => <Post message={element.message} likesCount={element.likesCount}/>)
+     let postsElements = state.profilePage.posts.map(element => <Post message={element.message} likesCount={element.likesCount} key={element.id}/>)
 
     return (
         <div className={style.postsBlock}>
