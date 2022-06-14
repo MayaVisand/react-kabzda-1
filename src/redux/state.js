@@ -20,6 +20,17 @@ let state = {
             {id: 3, message: 'Ikj djfhfsk sdk skdjkdfj sdwoels woewiqow odkk'},
             {id: 4, message: 'qwoo hakai hsdk aja lskdoqp qpwo'}
         ]
+    },
+
+    sideBar: {
+        friends: [
+            {id: 1, name: 'Masha'},
+            {id: 2, name: 'Sasha'},
+            {id: 3, name: 'Dasha'},
+            {id: 4, name: 'Tasha'},
+            {id: 5, name: 'Pasha'},
+            {id: 6, name: 'Glasha'},
+        ]
     }
 
 
