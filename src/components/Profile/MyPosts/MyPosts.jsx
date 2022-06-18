@@ -1,21 +1,29 @@
 import React from "react";
 import style from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import state from "../../../redux/state";
+import store from "../../../redux/state";
 
 const MyPosts = (props) => {
+    console.log(props.state)
+    let postsElements = props.state.map(element => <Post message={element.message}
+                                                                     likesCount={element.likesCount} key={element.id}/>)
+    let newPostElement = React.createRef()
 
-     let postsElements = state.profilePage.posts.map(element => <Post message={element.message} likesCount={element.likesCount} key={element.id}/>)
-
+    let addPost = () => {
+        {
+           let text = newPostElement.current.value
+            alert(text)
+        }
+    }
     return (
         <div className={style.postsBlock}>
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea className="form-control">how are u?</textarea>
+                    <textarea ref={newPostElement} className="form-control">how are u?</textarea>
                 </div>
                 <div>
-                    <button className="btn btn-light">Send</button>
+                    <button onClick={addPost} className="btn btn-light">Send</button>
                 </div>
 
             </div>

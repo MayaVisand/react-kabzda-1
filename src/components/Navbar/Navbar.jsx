@@ -1,12 +1,12 @@
 import React from "react";
 import style from "./Navbar.module.css";
-import state from "../../redux/state";
+import store from "../../redux/state";
 import Message from "../Dialogs/MessageItem/MessageItem";
 import FriendItem from "./FriendItem";
 
 const Navbar = () => {
 
-    let friendsElement = state.sideBar.friends.map(element => <FriendItem name={element.name} key={element.id}/>)
+    let friendsElement = store._state.sideBar.friends.map(element => <FriendItem name={element.name} key={element.id}/>)
 
     return (
     <div>
@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className={style.friends}>
             <h3>Friends</h3>
             <div>
-              <FriendItem name={state.sideBar.friends.name} key={state.sideBar.friends.id}/>
+              <FriendItem name={store._state.sideBar.friends.name} key={store._state.sideBar.friends.id}/>
 
 
             </div>
