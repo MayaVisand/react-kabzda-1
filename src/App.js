@@ -12,6 +12,7 @@ import store from "./redux/state";
 
 const App = (props) => {
     return (
+
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>

@@ -3,6 +3,7 @@ import style from "./Navbar.module.css";
 import store from "../../redux/state";
 import Message from "../Dialogs/MessageItem/MessageItem";
 import FriendItem from "./FriendItem";
+import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
 

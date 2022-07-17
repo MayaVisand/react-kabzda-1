@@ -2,6 +2,8 @@ import React from "react";
 import style from "./MyPosts.module.css";
 import Post from "./Post/Post";
 import store from "../../../redux/state";
+import {ADD_POST} from "../../../redux/profile-reducer";
+import {addPostActionCreator, updateNewPostActionCreator, } from "../../../redux/profile-reducer";
 
 const MyPosts = (props) => {
     console.log(props.state)
@@ -12,7 +14,9 @@ const MyPosts = (props) => {
     let addPost = () => {
         {
            let text = newPostElement.current.value
-            alert(text)
+            console.log(text)
+            store.addPost(text)
+            store.dispatch(ADD_POST)
         }
     }
     return (

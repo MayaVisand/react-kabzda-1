@@ -2,30 +2,48 @@ import React from "react";
 import style from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./MessageItem/MessageItem";
-import store from "../../redux/state";
-import Post from "../Profile/MyPosts/Post/Post";
+import {addMessageActionCreator,updateNewMessageTextAction} from "../../redux/dialogs-reducer";
+import state from "../../redux/state";
 
 const Dialogs = () => {
 
-    let dialogsElement = store._state.messagesPage.dialogs.map(element => <DialogItem key={element.id} name={element.name}
+    let dialogsElement = state._state.messagesPage.dialogs.map(element => <DialogItem key={element.id} name={element.name}
                                                                                id={element.id}/>)
-    let messagesElement = store._state.messagesPage.messages.map(element => <Message message={element.message}
+    let messagesElement = state._state.messagesPage.messages.map(element => <Message message={element.message}
                                                                               key={element.id}/>)
-
     let newDialogElement = React.createRef()
 
-    let  addPost = () => {
-        {
+    let newMessageText = state._state.messagesPage.newMessageText
 
-            let text = newDialogElement.current.value
-            alert(text)
+
+
+    let  addMessage = () => {
+        {
+            state.dispatch(addMessageActionCreator())
+            //     //console.log(this._state)
+            // console.log(newPost)
+            // // ID KEY нужен уникальный айди для корректной работы
+            // let postData = [{id: 5, message: newPost, likesCount: 0}]
+            // this._state.profilePage.posts.push(...postData);
+            // console.log(this._state)
+            // //this._state.profilePage.newPostText = '';
+            // this._callSubscriber(this._state);
+            //
+            // let text = newDialogElement.current.value
+            // let messageData = [{id: 5, message: text}]
+            // this._state.dialogs.push(...postData);
+            // store.dispatch(ADD_MASSAGE)
+            // // alert(text)
+            // // store._state.messagesPage.messages.push(text)
+            // console.log( 'new message' , text )
+
         }
     }
 
     let handleChangeNewPost = (event) => {
         let text = newDialogElement.current.value
-        store._state.profilePage.posts.push(text)
-        console.log( 'new text' , text )
+        console.log(text)
+        state.dispatch(updateNewMessageTextAction(text))
     }
     return (
         <div className={style.dialogs}>
@@ -35,8 +53,8 @@ const Dialogs = () => {
             </div>
             <div className="card">
                 <div className={'message-area'} >
-                    <textarea onChange={handleChangeNewPost} defaultValue={store._state.profilePage.newPostText} ref={newDialogElement}/>
-                    <button  onClick={addPost}>send</button>
+                    <textarea onChange={handleChangeNewPost} defaultValue={newMessageText} ref={newDialogElement}/>
+                    <button  onClick={addMessage}>send</button>
                 </div>
 
                 {messagesElement}
