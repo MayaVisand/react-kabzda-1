@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React from "react";
 import './App.css';
 import Header from "./components/Header/Header";
@@ -7,10 +6,10 @@ import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 
 import {Routes, Route, BrowserRouter} from "react-router-dom";
-import store from "./redux/state";
+import store from "./redux/redux-store";
 
 
-const App = (props) => {
+const App = () => {
     return (
 
             <div className="app-wrapper">

@@ -3,9 +3,11 @@ import style from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./MessageItem/MessageItem";
 import {addMessageActionCreator,updateNewMessageTextAction} from "../../redux/dialogs-reducer";
-import state from "../../redux/state";
+import state from "../../redux/store";
 
 const Dialogs = () => {
+
+    // let state = state.getState().messagesPage
 
     let dialogsElement = state._state.messagesPage.dialogs.map(element => <DialogItem key={element.id} name={element.name}
                                                                                id={element.id}/>)

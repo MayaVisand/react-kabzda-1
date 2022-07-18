@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import store from "../../../redux/state";
+import store from "../../../redux/store";
 import {ADD_POST} from "../../../redux/profile-reducer";
 import {addPostActionCreator, updateNewPostActionCreator, } from "../../../redux/profile-reducer";
 
@@ -16,8 +16,16 @@ const MyPosts = (props) => {
            let text = newPostElement.current.value
             console.log(text)
             store.addPost(text)
-            store.dispatch(ADD_POST)
+           // store.dispatch(ADD_POST)
+            store.dispatch(addPostActionCreator())
         }
+    }
+
+    let handlePostChange = () => {
+        let text = newPostElement.current.value
+        store.updateNewPostText(text)
+
+       // let action = updateNewPostActionCreator(text)
     }
     return (
         <div className={style.postsBlock}>
@@ -27,7 +35,7 @@ const MyPosts = (props) => {
                     <textarea ref={newPostElement} className="form-control">how are u?</textarea>
                 </div>
                 <div>
-                    <button onClick={addPost} className="btn btn-light">Send</button>
+                    <button onChange={handlePostChange} onClick={addPost} className="btn btn-light">Send</button>
                 </div>
 
             </div>

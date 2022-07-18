@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Navbar.module.css";
-import store from "../../redux/state";
+import store from "../../redux/store";
 import Message from "../Dialogs/MessageItem/MessageItem";
 import FriendItem from "./FriendItem";
 import {NavLink} from "react-router-dom";

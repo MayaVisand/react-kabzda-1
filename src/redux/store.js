@@ -41,8 +41,12 @@ let store = {
             }
         },
 
-    _callSubscriber() {
+    _callSubscriber(state) {
         console.log( 'State changed')
+        console.log('this state', this._state)
+        console.log('state', state)
+
+       // this._state.push(state)
     },
 
     getState() {

@@ -1,5 +1,5 @@
 import React from "react";
-import state from "../../redux/state";
+import state from "../../redux/store";
 import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
